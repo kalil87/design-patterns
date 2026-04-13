@@ -3,7 +3,7 @@ package com.example.patrones.Comportamentales.constructor;
 // Fluent Interface puro (sin patron Builder)
 class Animal {
     private String tipo;
-    private int edad;
+    private Integer edad;
     private String habitat;
 
     public Animal tipo(String tipo) {
@@ -11,7 +11,7 @@ class Animal {
         return this;
     }
 
-    public Animal edad(int edad) {
+    public Animal edad(Integer edad) {
         this.edad = edad;
         return this;
     }

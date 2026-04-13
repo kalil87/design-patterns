@@ -1,29 +1,29 @@
 package com.example.patrones.Comportamentales.constructor;
 
-// clase con patron Builder real GOF, con instancia aplicada y un poco mas simple
+// clase con patron Builder real GOF, Builder moderno (fluent builder)
 class Auto {
     private String marca;
-    private int anio;
+    private Integer anio;
     private String modelo;
 
-    public static AutoBuilder autoBuilder() {
-        return new AutoBuilder();
+    public static Builder builder() {
+        return new Builder();
     }
 
-    public static class AutoBuilder {
+    public static class Builder {
         private Auto auto = new Auto();
 
-        public AutoBuilder marca(String marca) {
+        public Builder marca(String marca) {
             auto.marca = marca;
             return this;
         }
 
-        public AutoBuilder anio(int anio) {
+        public Builder anio(Integer anio) {
             auto.anio = anio;
             return this;
         }
 
-        public AutoBuilder modelo(String modelo) {
+        public Builder modelo(String modelo) {
             auto.modelo = modelo;
             return this;
         }
